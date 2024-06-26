@@ -27,9 +27,8 @@ class RecruitmentAgents:
             )
         else:
             self.llm = ChatOpenAI(
-                model="crewai-llama3-8b",
-                base_url="http://localhost:11434/v1",
-                api_key="NA"
+                model="gpt-4",               
+                api_key=os.getenv("OPENAI_API_KEY")
             )
 
     def job_hunter_agent(self):
